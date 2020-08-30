@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{dsfont}
+\usepackage{cancel}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{systeme}
+
+\setlength{\parindent}{0pt}
+\usetikzlibrary{arrows.meta, calc, quotes, tikzmark, overlay-beamer-styles, babel}
+
+\title{Hoja de trabajo 4 EDO II}
+\author{Amado Alberto Cabrera Estrada\\
+201905757}
+\date{August 2020}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problema 1}
+Sea $V = \mathds{C}[-1, 1]$ sobre $\mathds{R}$ el espacio vectorial de todas las funciones reales continuas definidas en $[-1, 1]$. Defina el producto interno $\langle\cdot,\cdot\rangle:V \times V \to R$ como
+\[ \langle f,g\rangle=\int_{-1}^{1} f(t)g(t)dt \]
+\begin{enumerate}[a)]
+    \item ¿Es $f(x)=1$ un vector unitario?
+    
+    \item Halle una base ortonormal de $\text{Span}\{x,x^2\}$
+    
+    \item Sean
+    \[ V_1=\text{Span}\{1,x\} \ \text{ y } \ V_2=\text{Span}\left\{x^2-\frac{1}{3},x^3-\frac{3}{5}x\right\} \]
+    Demuestre que para todo $f\in V_1$ y para todo $g\in V_2$, $f$ y $g$ son ortogonales.
+\end{enumerate}
+
+\section*{Problema 2}
+Demuestre que en un espacio vectorial con producto interno (no necesariamente real), $x \perp y$ si y solo si $\|x+\alpha y\|=\|x-\alpha y\|$ para todo escalar $\alpha\in\mathds{C}$. (Debe utilizar los axiomas que cumple el producto interno y la definición de norma).
+
+\section*{Problema 3}
+Para cada $n\in N$ existe un polinomio de grado $n$, $P_n(x)$, que es solución de la ecuación diferencial
+\[ \frac{d}{dx}\left[(1-x^2)y'\right]+n(n+1)y=0 \]
+\begin{enumerate}[a)]
+    \item Demuestre que
+    \[ \int_{-1}^{1}P_{m}(x)\frac{d}{dx}[(1+x^2)P'_{n}(x)]dx = -\int_{-1}^{1}(1-x^2)P'_{n}(x)P'_{m}(x)dx \]
+    
+    \item Utilice (a) y la ecuación diferencial para llegar a
+    \[ [n(n+1)-m(m+1)]\int_{-1}^{1}P_{n}(x)P_{m}(x)dx=0 \]
+    
+    \item Concluya que $P_{n}(x)$ y $P_{m}(x)$ son ortogonales si $n\neq m$ bajo el producto interno del problema 1
+\end{enumerate}
+
+\end{document}
+
