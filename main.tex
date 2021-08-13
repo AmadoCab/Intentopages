@@ -19,14 +19,14 @@
 \node (D) at (7,7) {};
 
 % Big rectangle color
-\fill[myOrange,opacity=0.7] (4,0) -- (0,3) -- (B.center) -- (A.center) node[midway,myRed]{\textbf{c}} -- cycle;
+\fill[myOrange,opacity=0.7] (4,0) -- (0,3) -- (B.center) -- (A.center) -- cycle;
 
 % Here we draw the grid and te colored square
 \fill[myYellow] (3,3) rectangle (4,4);
 \draw[] (0,0) grid (7,7);
 
 % Big rectangle
-\draw[very thick] (4,0) -- (0,3) -- (B.center) -- (A.center) -- cycle;
+\draw[very thick] (4,0) -- (0,3) -- (B.center) -- (A.center) node[midway,myRed]{\textbf{c}} -- cycle;
 
 % Position labels
 \node at (A.east) [xshift=5] {\textbf{A}};
@@ -59,14 +59,14 @@
 \node (D) at (7,7) {};
 
 % Big rectangle color
-\fill[myOrange,opacity=0.7] (4,0) -- (0,3) -- (B.center) to[] node[auto,myRed]{\textbf{c}} (A.center) -- cycle;
+\fill[myOrange,opacity=0.7] (4,0) -- (0,3) -- (B.center) -- (A.center) -- cycle;
 
 % Here we draw the grid and te colored square
 \fill[myYellow] (3,3) rectangle (4,4);
 \draw[] (0,0) grid (7,7);
 
 % Big rectangle
-\draw[very thick] (4,0) -- (0,3) -- (B.center) -- (A.center) -- cycle;
+\draw[very thick] (4,0) -- (0,3) -- (B.center) to[] node[auto,myRed]{\textbf{c}} (A.center) -- cycle;
 
 % Position labels
 \node at (A.east) [xshift=5] {\textbf{A}};
